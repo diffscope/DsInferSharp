@@ -79,6 +79,17 @@ public class SingerImport : global::System.IDisposable {
     } 
   }
 
+  public StringList roles {
+    set {
+      dsinfer_csharp_bindingsPINVOKE.SingerImport_roles_set(swigCPtr, StringList.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = dsinfer_csharp_bindingsPINVOKE.SingerImport_roles_get(swigCPtr);
+      StringList ret = (cPtr == global::System.IntPtr.Zero) ? null : new StringList(cPtr, false);
+      return ret;
+    } 
+  }
+
   public SingerImport() : this(dsinfer_csharp_bindingsPINVOKE.new_SingerImport(), true) {
   }
 

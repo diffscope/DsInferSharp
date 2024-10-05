@@ -103,6 +103,12 @@ public class ContributeIdentifier : global::System.IDisposable {
     return ret;
   }
 
+  public static bool isValidId(string id) {
+    bool ret = dsinfer_csharp_bindingsPINVOKE.ContributeIdentifier_isValidId(id);
+    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }
 
 }

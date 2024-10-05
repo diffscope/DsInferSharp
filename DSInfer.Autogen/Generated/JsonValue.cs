@@ -112,6 +112,11 @@ public class JsonValue : global::System.IDisposable {
     return ret;
   }
 
+  public bool isInteger() {
+    bool ret = dsinfer_csharp_bindingsPINVOKE.JsonValue_isInteger(swigCPtr);
+    return ret;
+  }
+
   public bool isDouble() {
     bool ret = dsinfer_csharp_bindingsPINVOKE.JsonValue_isDouble(swigCPtr);
     return ret;
@@ -226,14 +231,31 @@ public class JsonValue : global::System.IDisposable {
     return ret;
   }
 
-  public static JsonValue fromJson(string json, /*cstype*/ out string error) {
-    JsonValue ret = new JsonValue(dsinfer_csharp_bindingsPINVOKE.JsonValue_fromJson__SWIG_0(json, out error), true);
+  public static JsonValue fromJson(string json, bool ignore_comments, /*cstype*/ out string error) {
+    JsonValue ret = new JsonValue(dsinfer_csharp_bindingsPINVOKE.JsonValue_fromJson__SWIG_0(json, ignore_comments, out error), true);
     if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static JsonValue fromJson(string json) {
-    JsonValue ret = new JsonValue(dsinfer_csharp_bindingsPINVOKE.JsonValue_fromJson__SWIG_1(json), true);
+  public static JsonValue fromJson(string json, bool ignore_comments) {
+    JsonValue ret = new JsonValue(dsinfer_csharp_bindingsPINVOKE.JsonValue_fromJson__SWIG_1(json, ignore_comments), true);
+    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ByteArray toCbor() {
+    ByteArray ret = new ByteArray(dsinfer_csharp_bindingsPINVOKE.JsonValue_toCbor(swigCPtr), true);
+    return ret;
+  }
+
+  public static JsonValue fromCbor(ByteArray cbor, /*cstype*/ out string error) {
+    JsonValue ret = new JsonValue(dsinfer_csharp_bindingsPINVOKE.JsonValue_fromCbor__SWIG_0(ByteArray.getCPtr(cbor), out error), true);
+    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static JsonValue fromCbor(ByteArray cbor) {
+    JsonValue ret = new JsonValue(dsinfer_csharp_bindingsPINVOKE.JsonValue_fromCbor__SWIG_1(ByteArray.getCPtr(cbor)), true);
     if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -241,9 +263,10 @@ public class JsonValue : global::System.IDisposable {
   public enum Type {
     Null = 0x0,
     Bool = 0x1,
-    Double = 0x2,
-    String = 0x3,
-    Binary = 0x4,
+    Integer = 0x2,
+    Double = 0x3,
+    String = 0x4,
+    Binary = 0x5,
     Array = 0x11,
     Object = 0x12,
     Undefined = 0x80

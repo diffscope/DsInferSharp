@@ -84,6 +84,12 @@ public class Inference : global::System.IDisposable {
     return ret;
   }
 
+  public InferenceSpec spec() {
+    global::System.IntPtr cPtr = dsinfer_csharp_bindingsPINVOKE.Inference_spec(swigCPtr);
+    InferenceSpec ret = (cPtr == global::System.IntPtr.Zero) ? null : new InferenceSpec(cPtr, false);
+    return ret;
+  }
+
   public Environment env() {
     global::System.IntPtr cPtr = dsinfer_csharp_bindingsPINVOKE.Inference_env(swigCPtr);
     Environment ret = (cPtr == global::System.IntPtr.Zero) ? null : new Environment(cPtr, false);

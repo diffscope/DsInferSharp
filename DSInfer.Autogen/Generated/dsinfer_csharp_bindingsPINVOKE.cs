@@ -342,6 +342,9 @@ class dsinfer_csharp_bindingsPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_isBool")]
   public static extern bool JsonValue_isBool(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_isInteger")]
+  public static extern bool JsonValue_isInteger(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_isDouble")]
   public static extern bool JsonValue_isDouble(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -409,10 +412,19 @@ class dsinfer_csharp_bindingsPINVOKE {
   public static extern string JsonValue_toJson__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_fromJson__SWIG_0")]
-  public static extern global::System.IntPtr JsonValue_fromJson__SWIG_0(string jarg1, /*imtype*/ out string jarg2);
+  public static extern global::System.IntPtr JsonValue_fromJson__SWIG_0(string jarg1, bool jarg2, /*imtype*/ out string jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_fromJson__SWIG_1")]
-  public static extern global::System.IntPtr JsonValue_fromJson__SWIG_1(string jarg1);
+  public static extern global::System.IntPtr JsonValue_fromJson__SWIG_1(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_toCbor")]
+  public static extern global::System.IntPtr JsonValue_toCbor(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_fromCbor__SWIG_0")]
+  public static extern global::System.IntPtr JsonValue_fromCbor__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, /*imtype*/ out string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_fromCbor__SWIG_1")]
+  public static extern global::System.IntPtr JsonValue_fromCbor__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_DisplayText__SWIG_0")]
   public static extern global::System.IntPtr new_DisplayText__SWIG_0();
@@ -654,6 +666,9 @@ class dsinfer_csharp_bindingsPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_Inference_result")]
   public static extern global::System.IntPtr Inference_result(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_Inference_spec")]
+  public static extern global::System.IntPtr Inference_spec(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_Inference_env")]
   public static extern global::System.IntPtr Inference_env(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -686,6 +701,9 @@ class dsinfer_csharp_bindingsPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_ContributeIdentifier_fromString")]
   public static extern global::System.IntPtr ContributeIdentifier_fromString(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_ContributeIdentifier_isValidId")]
+  public static extern bool ContributeIdentifier_isValidId(string jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_ContributeIdentifier")]
   public static extern void delete_ContributeIdentifier(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -809,6 +827,12 @@ class dsinfer_csharp_bindingsPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_SingerImport_options_get")]
   public static extern global::System.IntPtr SingerImport_options_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_SingerImport_roles_set")]
+  public static extern void SingerImport_roles_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_SingerImport_roles_get")]
+  public static extern global::System.IntPtr SingerImport_roles_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_SingerImport")]
   public static extern global::System.IntPtr new_SingerImport();
