@@ -642,12 +642,6 @@ class dsinfer_csharp_bindingsPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_LibrarySpec_env")]
   public static extern global::System.IntPtr LibrarySpec_env(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_LibrarySpec_searchLibrary__SWIG_0")]
-  public static extern string LibrarySpec_searchLibrary__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, bool jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_LibrarySpec_searchLibrary__SWIG_1")]
-  public static extern string LibrarySpec_searchLibrary__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_Inference")]
   public static extern void delete_Inference(global::System.Runtime.InteropServices.HandleRef jarg1);
 

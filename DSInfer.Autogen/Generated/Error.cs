@@ -89,6 +89,7 @@ public class Error : global::System.IDisposable {
     InvalidFormat,
     FileNotFound,
     FileDuplicated,
+    RecursiveDependency,
     FeatureNotSupported,
     LibraryNotFound
   }

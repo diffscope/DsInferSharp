@@ -139,18 +139,6 @@ public class LibrarySpec : global::System.IDisposable {
     return ret;
   }
 
-  public static string searchLibrary(PathList paths, string id, VersionNumber version, bool precise) {
-    string ret = dsinfer_csharp_bindingsPINVOKE.LibrarySpec_searchLibrary__SWIG_0(PathList.getCPtr(paths), id, VersionNumber.getCPtr(version), precise);
-    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-}
-
-  public static string searchLibrary(PathList paths, string id, VersionNumber version) {
-    string ret = dsinfer_csharp_bindingsPINVOKE.LibrarySpec_searchLibrary__SWIG_1(PathList.getCPtr(paths), id, VersionNumber.getCPtr(version));
-    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-}
-
 }
 
 }
