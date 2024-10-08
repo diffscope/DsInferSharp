@@ -822,12 +822,6 @@ class dsinfer_csharp_bindingsPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_SingerImport_options_get")]
   public static extern global::System.IntPtr SingerImport_options_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_SingerImport_roles_set")]
-  public static extern void SingerImport_roles_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_SingerImport_roles_get")]
-  public static extern global::System.IntPtr SingerImport_roles_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_SingerImport")]
   public static extern global::System.IntPtr new_SingerImport();
 
